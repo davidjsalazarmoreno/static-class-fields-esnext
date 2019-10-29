@@ -1,11 +1,20 @@
 class ColorFinder {
-  // Públicos
+  // Campos estáticos PrivadosPúblicos
   static iAmStaticAndPublic = 'Hello'
-  // Privados
+  // Campos estáticos Privados
   static #red = '#ff0000'
   static #green = '#00ff00'
   static #blue = '#0000ff'
   static #orange = '#ffa500'
+
+  #colorMode = 'hexadecimal'
+
+   /**
+   * Métodos estáticos públicos
+   */
+  static getColorModeFromInstance(instance) {
+    return instance.#colorMode
+  }
 
   static colorName(name) {
     switch (name) {
@@ -52,5 +61,12 @@ console.log(
   `The opposite of ${ColorFinder.colorName('red')} is ${color.getOpositeColor(
     'red'
   )}`
+)
+console.groupEnd()
+
+
+console.group('============ Public and private static methods ============')
+console.log(
+  `Getting color mode from color instance: ${ColorFinder.getColorModeFromInstance(color)}`
 )
 console.groupEnd()

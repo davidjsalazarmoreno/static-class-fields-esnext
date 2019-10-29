@@ -1,4 +1,4 @@
-# Instance class fields | ESNext | Bits
+# Static class fields | ESNext | Bits
 
 Video explanation (spanish)
 
